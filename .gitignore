@@ -1,0 +1,61 @@
+# Compiled executables
+*.exe
+*.out
+*.dll
+*.so
+*.dylib
+
+# Object files
+*.o
+*.obj
+*.a
+*.lib
+
+# Debug symbols
+*.dSYM
+*.debug
+
+# Build directories
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*.backup
+
+# Runtime files
+*.pid
+*.seed
+
+# Coverage files
+*.gcno
+*.gcda
+
+# Memory dump files
+*.dump
+*.core
+
+# CMake
+CMakeLists.txt.user
