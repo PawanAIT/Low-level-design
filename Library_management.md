@@ -32,39 +32,6 @@
 - **Thread Safety**: Basic concurrency support for multiple users
 - **Extensibility**: Easy to add new features (reservations, digital books, etc.)
 
----
-
-## 2. Class Design & Architecture
-
-### Class Diagram
-
-```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│     Book        │     │    Member       │     │   Librarian     │
-├─────────────────┤     ├─────────────────┤     ├─────────────────┤
-│ - isbn: string  │     │ - id: int       │     │ - id: int       │
-│ - title: string │     │ - name: string  │     │ - name: string  │
-│ - author: string│     │ - email: string │     │ - permissions   │
-│ - isAvailable   │1   *│ - borrowedBooks │     │                 │
-│ - borrowDate    │---------->│ - memberSince │     │                 │
-│ - dueDate       │     │ - totalFines    │     │                 │
-│ - borrowedBy    │*   1│ - isActive      │     │                 │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
-         │                       │                       │
-         │                       │                       │
-         ▼                       ▼                       ▼
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│  Transaction    │     │  Borrowing      │     │ Library         │
-├─────────────────┤     │   History       │     ├─────────────────┤
-│ - id: int       │     ├─────────────────┤     │ - books: vector  │
-│ - book: Book*   │     │ - memberId: int │     │ - members: vector│
-│ - member: Member│     │ - bookIsbn: str │     │ - librarians    │
-│ - type: enum    │     │ - borrowDate    │     │ - transactions  │
-│ - timestamp     │     │ - returnDate    │     │ - fineRules     │
-│ - fine: double  │     │ - status: enum  │     │                 │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
-```
-
 ### Design Decisions
 
 #### Core Principles Applied:

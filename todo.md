@@ -1,44 +1,23 @@
-# LLD Interview Questions Research Plan
+# Clang Format Update Task
 
 ## Objective
-Create a comprehensive list of Low Level Design interview questions to help candidates prepare for technical interviews.
+Update clang format configuration to follow Google C++ Style Guide from https://google.github.io/styleguide/cppguide.html
 
-## Research Steps
-- [ ] Research common LLD interview topics and question categories
-- [ ] Gather specific LLD question examples from different domains
-- [ ] Organize questions by complexity level (junior/mid/senior)
-- [ ] Categorize questions by system type (web services, databases, algorithms, etc.)
-- [ ] Include questions covering all aspects from the LLD template
-- [ ] Create a structured question bank with explanations
-- [ ] Verify completeness against the LLD template requirements
+## Steps
+- [ ] Fetch Google C++ Style Guide from the provided URL
+- [ ] Analyze formatting requirements from the style guide
+- [ ] Create/Update clang-format configuration file (.clang-format)
+- [ ] Apply the format to existing C++ files in the project
+- [ ] Test and verify the formatting matches Google style
 
-## Research Areas
-1. **System Design Fundamentals**
-   - Architecture patterns
-   - Scalability concepts
-   - Data modeling
+## Current Files to Format
+- scheduler.cpp
+- threadpool.cpp
 
-2. **Object-Oriented Design**
-   - Class hierarchy design
-   - Design patterns
-   - SOLID principles
-
-3. **Algorithm & Data Structure Design**
-   - Core algorithms implementation
-   - Advanced data structures
-   - Performance optimization
-
-4. **Real-world System Design**
-   - System integrations
-   - API design
-   - Microservices architecture
-
-5. **Domain-Specific Questions**
-   - E-commerce systems
-   - Social media platforms
-   - File storage systems
-   - Gaming systems
-   - Notification systems
-
-## Final Deliverable
-A structured document containing categorized LLD interview questions with difficulty levels and topic areas.
+## Style Guide Focus Areas
+- Indentation and whitespace
+- Line length and breaking
+- Naming conventions
+- Comment style
+- Class and function formatting
+- Control structure formatting

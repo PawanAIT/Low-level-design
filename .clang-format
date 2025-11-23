@@ -1,0 +1,62 @@
+# ClangFormat configuration for Google C++ Style Guide
+# Based on https://google.github.io/styleguide/cppguide.html
+
+Language: Cpp
+BasedOnStyle: Google
+
+# Column limit - Google style uses 80 characters
+ColumnLimit: 80
+
+# Indentation - Google style uses 2 spaces
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+
+# Braces - Google style uses K&R-like formatting
+BreakBeforeBraces: Stroustrup
+
+# Spacing - Google style preferences
+SpacesBeforeTrailingComments: 2
+SpacesInParentheses: false
+SpacesInAngles: false
+SpaceAfterCStyleCast: true
+SpaceAfterLogicalNot: false
+SpaceBeforeParens: ControlStatementsExceptControlMacros
+SpaceBeforeRangeBasedForLoopColon: true
+
+# Line breaking
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+
+# Pointer alignment - Google style
+DerivePointerAlignment: false
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# Include sorting
+SortIncludes: true
+IncludeCategories:
+  - Regex: '^".*\.h"$'  # Local headers
+    Priority: 1
+  - Regex: '^<.*'       # System headers  
+    Priority: 2
+  - Regex: '.*'         # Everything else
+    Priority: 3
+
+# Comments
+CommentPragmas: '^ IWYU pragma:'
+FixNamespaceComments: true
+
+# Penalties for line breaks
+PenaltyBreakAssignment: 2
+PenaltyBreakComment: 80
+PenaltyBreakString: 1000
+PenaltyExcessCharacter: 100
+PenaltyReturnTypeOnItsOwnLine: 200
+
+# Reflow
+ReflowComments: true
