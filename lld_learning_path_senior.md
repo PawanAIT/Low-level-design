@@ -6,6 +6,7 @@ This guide is organized as a **learning path** for senior software engineers to 
 
 **Prerequisites:** 5+ years of software development experience, basic system design knowledge
 
+**Contraints**: This is an one hour interview so it should focus on relationships of classes, entity, actors, etc rather than full working implementation we can comment the boring implementation and just give the most important implementation only.
 ---
 
 ## Stage 1: Object-Oriented Design Fundamentals
