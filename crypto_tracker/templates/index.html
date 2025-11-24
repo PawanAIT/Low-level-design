@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Trade Tracker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Live Crypto Trades (BTC & ETH)</h1>
+        <button id="reset-button">Reset Data</button>
+        <div id="summary-container">
+            <h2>Trading Activity Summary</h2>
+            <table id="summary-table">
+                <thead>
+                    <tr>
+                        <th>Coin</th>
+                        <th>Total Trades</th>
+                        <th>Buys</th>
+                        <th>Sells</th>
+                        <th>Buy Volume (USD)</th>
+                        <th>Sell Volume (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Summary data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+
+        <div id="whales-container">
+            <h2>Whale Trades (Over $100,000)</h2>
+            <!-- Whale trade data will be inserted here -->
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>
